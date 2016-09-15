@@ -1,0 +1,16 @@
+@media(min-width: 320px) {
+
+
+.hudson{
+  top:0;
+}
+
+
+
+
+.time-list {
+  justify-content: space-between;
+  font-size:16px;
+}
+
+}

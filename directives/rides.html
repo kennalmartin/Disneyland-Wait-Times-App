@@ -1,0 +1,7 @@
+<div ng-repeat="land in parkData">
+  <div  ng-mouseenter='addColor(true)' ng-mouseleave='addColor(false)' ng-style='changeColor' class='park-name' ng-click='hideRides(land)'>{{land.name}}</div>
+  <div ng-model='waitTimesSection' class='time-list' ng-repeat="ride in land.attractions" ng-show='land.openRide'>
+  <div class='ride-name'>{{ride.name}} </div>
+  <div class='minutes'>{{ride.waitTime}}min</div>
+</div>
+</div>

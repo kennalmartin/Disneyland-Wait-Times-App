@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app='waitApp'>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Disneyland Wait Times</title>
+    <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="/styles/base.css">
+    <link rel="stylesheet" href="/styles/phone-query.css">
+    <link rel="stylesheet" href="/styles/tablet-query.css">
+    <link rel="stylesheet" href="/styles/laptop-query.css">
+    <link rel="stylesheet" href="/styles/bigScreen-query.css">
+
+
+
+
+
+  </head>
+  <body>
+<section class='main' ng-controller='mainCtrl'>
+
+  <h1>Disneyland Wait Times</h1>
+  <img class='hudson' src='img/hudson.jpg'/>
+  <div class='blue-bkg'></div>
+  <div class='weather-app borders'><img class='img-time' weather-directive ng-hide='sunHidden' ng-src='http://image.flaticon.com/icons/png/128/118/118755.png'/><img ng-hide='moonHidden' class='img-time' weather-directive ng-src='https://cdn0.iconfinder.com/data/icons/thin-energy-lights/57/thin-473_weather_moon_night_stars_sleep_screensaver_stand_by-512.png'/>{{theTime | date:'MMM d, yyyy h:mma'}}  <br> Anaheim, CA {{weather}} &#x2109;</div>
+<div ng-mouseenter='addColor(true)' ng-mouseleave='addColor(false)' ng-style='changeColor' ng-click='hideView(hoursView)' ui-sref='parkHours' class='hours-btn borders'>
+  View Hours and Wait Times
+</div>
+<ui-view ng-show='hoursView'></ui-view>
+
+
+</section>
+
+
+
+
+
+
+
+
+  <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js'></script>
+  <script src='/dist/all.js'></script>
+  </body>
+</html>

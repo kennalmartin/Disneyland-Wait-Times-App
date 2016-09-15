@@ -1,0 +1,22 @@
+<div class='hours'>
+<h2>{{head}}</h2>
+<div class='disney-hours'>
+  <p class='park-title'>Disneyland</p>
+  <p class='magic-morning-hours'>{{magicMorningDisney}}</p>
+  <p>{{disneyHours.openingTime}}AM - {{disneyHours.closingTime}}PM</p>
+
+</div>
+
+<div class='cali-hours'>
+  <p class='park-title'>Disney California Adventure</p>
+  <p class='magic-morning-hours'>{{magicMorningCali}}</p>
+  <p>{{caliHours.openingTime}}AM - {{caliHours.closingTime}}PM</p>
+</div>
+
+<div>
+<div ng-mouseenter='addColorDisney(true)' ng-mouseleave='addColorDisney(false)' ng-style='changeColorDisney' class='wait-btn' ui-sref='disneyland'>Disneyland Wait Times</div>
+<div ng-mouseenter='addColorCali(true)' ng-mouseleave='addColorCali(false)' ng-style='changeColorCali' class='wait-btn' ui-sref='caliAdventure'>California Adventure Wait Times</div>
+</div>
+</div>
+
+<ui-view></ui-view>

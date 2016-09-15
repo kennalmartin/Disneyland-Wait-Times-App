@@ -1,0 +1,23 @@
+@media(min-width: 1100px) {
+
+
+
+
+.hours {
+    font-size: 2em;
+
+}
+
+
+
+.time-list {
+  justify-content: center;
+  font-size:26px;
+  line-height: 50px;
+}
+
+.minutes{
+  margin-left: 15px;
+}
+
+}
